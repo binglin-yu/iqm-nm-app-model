@@ -23,6 +23,7 @@
         <module>entity-vo-model</module>
         <module>http-session-service</module>
         <module>rmi-service</module>
+        <module>http-session-service-client</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
