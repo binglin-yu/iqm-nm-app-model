@@ -1,6 +1,7 @@
 
 package com.tr.rdss.generic.model.iqm.concordance.http.session_client;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -97,16 +98,79 @@ public interface HttpSessionIQMService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getQuoteVOByPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuoteVOByPermId")
-    @ResponseWrapper(localName = "getQuoteVOByPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuoteVOByPermIdResponse")
-    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuoteVOByPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuoteVOByPermIdResponse")
-    public String getQuoteVOByPermId(
+    @RequestWrapper(localName = "getInstrumentPermIdsByOAPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetInstrumentPermIdsByOAPermId")
+    @ResponseWrapper(localName = "getInstrumentPermIdsByOAPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetInstrumentPermIdsByOAPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getInstrumentPermIdsByOAPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getInstrumentPermIdsByOAPermIdResponse")
+    public String getInstrumentPermIdsByOAPermId(
         @WebParam(name = "arg0", targetNamespace = "")
         Long arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1,
         @WebParam(name = "arg2", targetNamespace = "")
         String arg2);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getHistoryAttributeOfQuoteByPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetHistoryAttributeOfQuoteByPermId")
+    @ResponseWrapper(localName = "getHistoryAttributeOfQuoteByPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetHistoryAttributeOfQuoteByPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getHistoryAttributeOfQuoteByPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getHistoryAttributeOfQuoteByPermIdResponse")
+    public String getHistoryAttributeOfQuoteByPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        String arg3);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getHistoryAttributeOfInstrumentByPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetHistoryAttributeOfInstrumentByPermId")
+    @ResponseWrapper(localName = "getHistoryAttributeOfInstrumentByPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetHistoryAttributeOfInstrumentByPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getHistoryAttributeOfInstrumentByPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getHistoryAttributeOfInstrumentByPermIdResponse")
+    public String getHistoryAttributeOfInstrumentByPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        String arg3);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<java.lang.String>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMarketRDNExchangeCodeByPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMarketRDNExchangeCodeByPermId")
+    @ResponseWrapper(localName = "getMarketRDNExchangeCodeByPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMarketRDNExchangeCodeByPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMarketRDNExchangeCodeByPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMarketRDNExchangeCodeByPermIdResponse")
+    public List<String> getMarketRDNExchangeCodeByPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
 
     /**
      * 
@@ -122,5 +186,329 @@ public interface HttpSessionIQMService {
     public Long saveEntityVO(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getOrgLookup", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetOrgLookup")
+    @ResponseWrapper(localName = "getOrgLookupResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetOrgLookupResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getOrgLookupRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getOrgLookupResponse")
+    public String getOrgLookup(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getInstrumentVOByPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetInstrumentVOByPermId")
+    @ResponseWrapper(localName = "getInstrumentVOByPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetInstrumentVOByPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getInstrumentVOByPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getInstrumentVOByPermIdResponse")
+    public String getInstrumentVOByPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getQuoteVOByPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuoteVOByPermId")
+    @ResponseWrapper(localName = "getQuoteVOByPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuoteVOByPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuoteVOByPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuoteVOByPermIdResponse")
+    public String getQuoteVOByPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getQuotePermIdBySymbol", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuotePermIdBySymbol")
+    @ResponseWrapper(localName = "getQuotePermIdBySymbolResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuotePermIdBySymbolResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuotePermIdBySymbolRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuotePermIdBySymbolResponse")
+    public Long getQuotePermIdBySymbol(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Long arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMasterGateLookup", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMasterGateLookup")
+    @ResponseWrapper(localName = "getMasterGateLookupResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMasterGateLookupResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMasterGateLookupRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMasterGateLookupResponse")
+    public String getMasterGateLookup(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getModelMetadataProperties", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetModelMetadataProperties")
+    @ResponseWrapper(localName = "getModelMetadataPropertiesResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetModelMetadataPropertiesResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getModelMetadataPropertiesRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getModelMetadataPropertiesResponse")
+    public String getModelMetadataProperties();
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "countQuotesInRDC", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.CountQuotesInRDC")
+    @ResponseWrapper(localName = "countQuotesInRDCResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.CountQuotesInRDCResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/countQuotesInRDCRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/countQuotesInRDCResponse")
+    public Long countQuotesInRDC(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "countInstrumentsInRDC", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.CountInstrumentsInRDC")
+    @ResponseWrapper(localName = "countInstrumentsInRDCResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.CountInstrumentsInRDCResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/countInstrumentsInRDCRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/countInstrumentsInRDCResponse")
+    public Long countInstrumentsInRDC(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getQuotePermIdsByBaseAssetPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuotePermIdsByBaseAssetPermId")
+    @ResponseWrapper(localName = "getQuotePermIdsByBaseAssetPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuotePermIdsByBaseAssetPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuotePermIdsByBaseAssetPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuotePermIdsByBaseAssetPermIdResponse")
+    public String getQuotePermIdsByBaseAssetPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getModelMetadataPermIdByLevelNameValue", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetModelMetadataPermIdByLevelNameValue")
+    @ResponseWrapper(localName = "getModelMetadataPermIdByLevelNameValueResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetModelMetadataPermIdByLevelNameValueResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getModelMetadataPermIdByLevelNameValueRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getModelMetadataPermIdByLevelNameValueResponse")
+    public Long getModelMetadataPermIdByLevelNameValue(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMarketPermIdByRDNExchangeCode", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMarketPermIdByRDNExchangeCode")
+    @ResponseWrapper(localName = "getMarketPermIdByRDNExchangeCodeResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMarketPermIdByRDNExchangeCodeResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMarketPermIdByRDNExchangeCodeRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMarketPermIdByRDNExchangeCodeResponse")
+    public Long getMarketPermIdByRDNExchangeCode(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getQuotePermidByRic", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuotePermidByRic")
+    @ResponseWrapper(localName = "getQuotePermidByRicResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetQuotePermidByRicResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuotePermidByRicRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getQuotePermidByRicResponse")
+    public Long getQuotePermidByRic(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg4
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "rdcCheckForCcd", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.RdcCheckForCcd")
+    @ResponseWrapper(localName = "rdcCheckForCcdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.RdcCheckForCcdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/rdcCheckForCcdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/rdcCheckForCcdResponse")
+    public String rdcCheckForCcd(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        String arg3,
+        @WebParam(name = "arg4", targetNamespace = "")
+        List<String> arg4);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "invokeDBFunction", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.InvokeDBFunction")
+    @ResponseWrapper(localName = "invokeDBFunctionResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.InvokeDBFunctionResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/invokeDBFunctionRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/invokeDBFunctionResponse")
+    public String invokeDBFunction(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCurrencyPermIdByCode", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetCurrencyPermIdByCode")
+    @ResponseWrapper(localName = "getCurrencyPermIdByCodeResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetCurrencyPermIdByCodeResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getCurrencyPermIdByCodeRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getCurrencyPermIdByCodeResponse")
+    public Long getCurrencyPermIdByCode(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMetadataValueByEnuPermid", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMetadataValueByEnuPermid")
+    @ResponseWrapper(localName = "getMetadataValueByEnuPermidResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetMetadataValueByEnuPermidResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMetadataValueByEnuPermidRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getMetadataValueByEnuPermidResponse")
+    public String getMetadataValueByEnuPermid(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCurrencyCodeByPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetCurrencyCodeByPermId")
+    @ResponseWrapper(localName = "getCurrencyCodeByPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetCurrencyCodeByPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getCurrencyCodeByPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getCurrencyCodeByPermIdResponse")
+    public String getCurrencyCodeByPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTimeZoneByMarketPermId", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetTimeZoneByMarketPermId")
+    @ResponseWrapper(localName = "getTimeZoneByMarketPermIdResponse", targetNamespace = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/", className = "com.tr.rdss.generic.model.iqm.concordance.http.session_client.GetTimeZoneByMarketPermIdResponse")
+    @Action(input = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getTimeZoneByMarketPermIdRequest", output = "http://session.http.concordance.iqm.model.generic.rdss.tr.com/HttpSessionIQMService/getTimeZoneByMarketPermIdResponse")
+    public String getTimeZoneByMarketPermId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
 
 }

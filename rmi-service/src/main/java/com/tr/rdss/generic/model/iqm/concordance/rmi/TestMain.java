@@ -182,7 +182,7 @@ public class TestMain {
                 System.out.println(permIds);
                 
                 System.out.println("================ getModelMetadataProperties ==================");
-                List<ModelMetadataVO> list = test.getModelMetadataProperties();
+                List<ModelMetadataVO> list = test.getModelMetadataProperties().getElementList();
                 System.out.println(list.size());
                 System.out.println(list.size() + ": " + list.get(1).toString());
 

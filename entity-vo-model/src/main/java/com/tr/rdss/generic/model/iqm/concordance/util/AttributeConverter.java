@@ -11,6 +11,7 @@ import com.tr.rdss.generic.model.iqm.QuoteAsset;
 import com.tr.rdss.generic.model.iqm.Relationship;
 import com.tr.rdss.generic.model.iqm.concordance.EntityVO;
 import com.tr.rdss.generic.model.iqm.concordance.InstrumentVO;
+import com.tr.rdss.generic.model.iqm.concordance.ModelMetadataLookupVO;
 import com.tr.rdss.generic.model.iqm.concordance.ModelMetadataVO;
 import com.tr.rdss.generic.model.iqm.concordance.QuoteVO;
 
@@ -183,9 +184,12 @@ public abstract class AttributeConverter {
 //            ConvertiblePropertyKey.quoteEntityLevel,
 //            QuoteVO.AttributesEnum.TRADES_ON_SUBMARKET.getEnumName()));
         
-        List<ModelMetadataVO> modelMetadataVOList = service.getModelMetadataProperties();
-        for (ModelMetadataVO modelMetadataVO : modelMetadataVOList) {
-            modelMetadataLookupAttributeNames.add(new ConvertiblePropertyKey(modelMetadataVO.getEntityLevel(), modelMetadataVO.getPropertyName()));
+        ModelMetadataLookupVO modelMetadataLookupVO = service.getModelMetadataProperties();
+        if (modelMetadataLookupVO != null) {
+            List<ModelMetadataVO> modelMetadataVOList = service.getModelMetadataProperties().getElementList();
+            for (ModelMetadataVO modelMetadataVO : modelMetadataVOList) {
+                modelMetadataLookupAttributeNames.add(new ConvertiblePropertyKey(modelMetadataVO.getEntityLevel(), modelMetadataVO.getPropertyName()));
+            }
         }
 
     }

@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.tr.rdss.generic.model.iqm.Attribute;
 import com.tr.rdss.generic.model.iqm.Relationship;
+import java.util.HashSet;
 //import com.tr.rdss.generic.model.iqm.concordance.ModelMetadataVO.ModelMetadataVOKey;
 //import com.tr.rdss.generic.model.iqm.concordance.util.Utils;
 
@@ -36,6 +37,24 @@ public class ModelMetadataLookupVO extends EntityVO implements LookupInterface {
             new ModelMetadataVO(domPermId, domName, enuPermId,
                 enuUniqueName, enuValue, tableName, propertyName,
                 entityLevel), null, null);
+    }
+    
+    public ModelMetadataLookupVO getModelProperties() {
+        ModelMetadataLookupVO lookupVO = new ModelMetadataLookupVO();
+        // always dedup the list
+        HashSet<String> keySet = new HashSet<String>();
+        List<ModelMetadataVO> elementList = this.getElementList();
+        if (elementList == null) {
+            return null;
+        }
+        for (ModelMetadataVO modelMetadataVO : elementList) {
+            String key = modelMetadataVO.getEntityLevel() + "." + modelMetadataVO.getPropertyName();
+            if (!keySet.contains(key)) {
+                keySet.add(key);
+                lookupVO.addModelMetadata(null, null, null, null, null, null, modelMetadataVO.getPropertyName(), modelMetadataVO.getEntityLevel());
+            }
+        }
+        return lookupVO;
     }
 
     /**

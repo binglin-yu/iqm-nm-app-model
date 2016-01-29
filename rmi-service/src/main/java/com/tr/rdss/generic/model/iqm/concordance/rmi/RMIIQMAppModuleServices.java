@@ -1020,10 +1020,7 @@ public class RMIIQMAppModuleServices implements AttributeConverterService{
      * db.
      */
     @Override
-    public List<ModelMetadataVO> getModelMetadataProperties() throws InvalidServiceMethodCallException {
-        List<ModelMetadataVO> modelMetadataVOList = new ArrayList<ModelMetadataVO>();
-        List<ModelMetadataVO> list = null;
-
+    public ModelMetadataLookupVO getModelMetadataProperties() throws InvalidServiceMethodCallException {
         String resultStr = (String) Utils.callMethod(this.getIQMLookupAppModuleService(),//
             "getModelMetadataPropertiesJSON", //
             new Object[]{});
@@ -1032,28 +1029,14 @@ public class RMIIQMAppModuleServices implements AttributeConverterService{
         try {
             tmp = (ModelMetadataLookupVO) Utils.getEntityVOFromJSON(resultStr);
             if (tmp != null) {
-                list = tmp.getElementList();
-            }
+                return tmp.getModelProperties();
+            } else
+                return null;
         } catch (JSONException ex) {
 //                Utils.printTrace(false);
 //                Utils.printMessage(ex);
             throw new InvalidServiceMethodCallException(ex);
         }
-
-        // always dedup the list
-        HashSet<String> keySet = new HashSet<String>();
-        if (list == null) {
-            return modelMetadataVOList;
-        }
-
-        for (ModelMetadataVO modelMetadataVO : list) {
-            String key = modelMetadataVO.getEntityLevel() + "." + modelMetadataVO.getPropertyName();
-            if (!keySet.contains(key)) {
-                keySet.add(key);
-                modelMetadataVOList.add(new ModelMetadataVO(null, null, null, null, null, null, modelMetadataVO.getPropertyName(), modelMetadataVO.getEntityLevel()));
-            }
-        }
-        return modelMetadataVOList;
     }
 
     /**
@@ -1092,7 +1075,7 @@ public class RMIIQMAppModuleServices implements AttributeConverterService{
      * Count the matched instruments in RDC. <br>
      * Refer to the IQM native master service for the details. <br>
      */
-    public Long countInstrumentsInRDC(EnumInterface propertyEnum, String propertyValue) throws InvalidServiceMethodCallException, JSONException {
+    public Long countInstrumentsInRDC(InstrumentVO.AttributesEnum propertyEnum, String propertyValue) throws InvalidServiceMethodCallException, JSONException {
         String res = (String) Utils.callMethod(this.getIQMAppService(),//
             "getRDCCheckJSonForInstrument", //
             new Object[]{propertyEnum.getEnumName(), propertyValue});

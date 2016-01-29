@@ -247,7 +247,8 @@ public class TestRMIIQMAppModuleServices {
     @Test
     public void testModelMetadataProperties() throws InvalidRMIServiceException, InvalidServiceMethodCallException, JSONException {
         RMIIQMAppModuleServices test = new RMIIQMAppModuleServices(null);
-        List<ModelMetadataVO> list = test.getModelMetadataProperties();
+        
+        List<ModelMetadataVO> list = test.getModelMetadataProperties().getElementList();
         for (ModelMetadataVO modelMetadataVO : list) {
             Utils.printMessage("<" + modelMetadataVO.getEntityLevel() + ">\t<" + modelMetadataVO.getPropertyName() + ">");
         }

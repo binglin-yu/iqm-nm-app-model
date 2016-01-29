@@ -5,6 +5,7 @@
  */
 package com.tr.rdss.generic.model.iqm.concordance.util;
 
+import com.tr.rdss.generic.model.iqm.concordance.ModelMetadataLookupVO;
 import com.tr.rdss.generic.model.iqm.concordance.ModelMetadataVO;
 import java.util.List;
 
@@ -18,5 +19,5 @@ public interface AttributeConverterService {
     public Long getModelMetadataPermIdByLevelNameValue(String entityLevel, String propertyName,
         String propertyValue) throws InvalidServiceMethodCallException;
     public String getMetadataValueByEnuPermid(Long enuPermid) throws InvalidServiceMethodCallException;
-    public List<ModelMetadataVO> getModelMetadataProperties() throws InvalidServiceMethodCallException;
+    public ModelMetadataLookupVO getModelMetadataProperties() throws InvalidServiceMethodCallException;
 } 
